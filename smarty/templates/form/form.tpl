@@ -5,7 +5,9 @@
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 	<title>お問い合せフォーム</title>
 	<link rel="stylesheet" type="text/css" media="screen" href="../css/form.css" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="../js/form.js"></script>
 </head>
 <body>
 
@@ -28,7 +30,7 @@
 	<tbody>
 		<tr>
 			<th><label for="name">お名前(*)</label></th>
-			<td><input id="name" type="text" name="name" value="{$list.name|escape}" /></td>
+			<td><input id="name" class="required" type="text" name="name" value="{$list.name|escape}" /></td>
 		</tr>
 		<tr>
 			<th><label for="company">会社名</label></th>
@@ -36,7 +38,7 @@
 		</tr>
 		<tr>
 			<th><label for="email">メールアドレス(*)</label></th>
-			<td><input id="email" type="text" name="email" value="{$list.email|escape}" /></td>
+			<td><input id="email" class="required email" type="text" name="email" value="{$list.email|escape}" /></td>
 		</tr>
 		<tr>
 			<th><label for="tel">電話番号(*)</label></th>
