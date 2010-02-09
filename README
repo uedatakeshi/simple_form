@@ -1,2 +1,10 @@
-Simple Form is small PHP script for sendinf email from simple HTML form.
+simple_form v1.0.0
+
+Installation 
+1. Copy the files into a folder on your server. 
+2. Download the Smarty files from http://www.smarty.net/.
+3. Copy the Smarty files under the libs/ directory to your smarty/libs/ directory.
+4. Create a "templates_c" directory, chmod 777.
+5. Open public_html/form/config.php.default.
+6. Edit your path information and save as "config.php".
 

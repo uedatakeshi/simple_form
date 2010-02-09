@@ -1,6 +1,5 @@
 <?php
 /**
- * Owl Tools Project
  * Simple Form Script Version: 1.0.0 
  * 
  * This program is free software: you can redistribute it and/or modify
@@ -17,9 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * 
  * @copyright     Copyright 2010, Taiki, Inc. (http://www.twain.jp/)
- * @link          http://www.twain.jp/ Owl Tools Project
- * @author        Owl Tools <info at twain dot jp>
- * @author        Takeshi Ueda 
+ * @link          http://www.twain.jp/ 
+ * @author        T-wain Network Systems <info at twain dot jp>
+ * @author        Takeshi Ueda <ueda at twain dot jp> 
  */
 
 require_once('./config.php');
