@@ -1,0 +1,15 @@
+<?php
+define('SMARTY_DIR', '/home/tools/smarty/libs/');
+require_once(SMARTY_DIR . 'Smarty.class.php');
+$smarty = new Smarty;
+$smarty->compile_dir  = '/home/tools/smarty/templates_c';
+$smarty->template_dir = '/home/tools/smarty/templates';
+
+
+define('SEND_MAIL', '/usr/sbin/sendmail');
+define('MAIL_FROM', 'admin@your-domain.com');
+define('FROM_NAME', '事務局');
+define('SUBJECT_2U', 'お問い合せいただきありがとうございます。');
+define('SUBJECT_2ME', 'お問い合わせがありました');
+
+?>

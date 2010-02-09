@@ -1,0 +1,59 @@
+
+fieldset {
+	border: none;
+}
+
+table {
+	border: 1px solid;
+	border-collapse: collapse;
+	width: 600px;
+}
+th {
+	border: 1px solid;
+	text-align: right;
+	width: 170px;
+}
+td {
+	border: 1px solid;
+}
+
+input, textarea, select {
+	padding: 5px;
+	width: 415px;
+	display: block;
+}
+
+input.radio, input.checkbox {
+	display: inline;
+	width: auto;
+}
+
+
+.controls input {
+	border: none;
+	cursor: pointer;
+	height: 31px;
+	margin: 0;
+	overflow: hidden;
+	padding: 31px 0 0 79px;
+	width: 79px;
+}
+
+.controls input#next_button {
+	background: url("../img/next.png") no-repeat scroll 0 0 transparent;
+}
+
+.controls input#reset_button {
+	background: url("../img/reset.png") no-repeat scroll 0 0 transparent;
+	float: left;
+}
+
+.controls input#back_button {
+	background: url("../img/back.png") no-repeat scroll 0 0 transparent;
+	float: left;
+}
+
+.controls input#send_button {
+	background: url("../img/send.png") no-repeat scroll 0 0 transparent;
+}
+
