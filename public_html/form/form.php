@@ -60,7 +60,7 @@ if (isset($_POST['submit'])) {
 	}
 
 	if ($list['submit'] == 'next') {
-
+print_r($list);
 		$smarty->display('form/confirm.tpl');
 		exit;
 

@@ -17,20 +17,20 @@
 	<form action="form.php" method="post">
 	<fieldset>
 	<p>*印は必須項目です。</p>
-	{if $emes}
 		<div id="messages">
 			<ul>
+	{if $emes}
 			{foreach from=$emes item=emes}
 				<li>{$emes|escape}</li>
 			{/foreach}
+	{/if}
 			</ul>
 		</div>
-	{/if}
 	<table>
 	<tbody>
 		<tr>
 			<th><label for="name">お名前(*)</label></th>
-			<td><input id="name" class="required" type="text" name="name" value="{$list.name|escape}" /></td>
+			<td><input id="name" type="text" name="name" value="{$list.name|escape}" /></td>
 		</tr>
 		<tr>
 			<th><label for="company">会社名</label></th>
@@ -38,7 +38,7 @@
 		</tr>
 		<tr>
 			<th><label for="email">メールアドレス(*)</label></th>
-			<td><input id="email" class="required email" type="text" name="email" value="{$list.email|escape}" /></td>
+			<td><input id="email" type="text" name="email" value="{$list.email|escape}" /></td>
 		</tr>
 		<tr>
 			<th><label for="tel">電話番号(*)</label></th>
@@ -46,17 +46,17 @@
 		</tr>
 		<tr>
 			<th>お問い合せのきっかけ(*)</th>
-			<td><input class="checkbox" id="clue1" type="checkbox" name="clue[1]" value="HPを見て" {if $list.clue.1}checked="checked"{/if} />
+			<td><input class="checkbox" id="clue1" type="checkbox" name="clue[]" value="HPを見て" {foreach from=$list.clue item=clue}{if $clue == "HPを見て"}checked="checked"{/if}{/foreach} />
 				<label for="clue1">HPを見て</label>
-				<input class="checkbox" id="clue2" type="checkbox" name="clue[2]" value="知人の紹介" {if $list.clue.2}checked="checked"{/if}/>
+				<input class="checkbox" id="clue2" type="checkbox" name="clue[]" value="知人の紹介" {foreach from=$list.clue item=clue}{if $clue == "知人の紹介"}checked="checked"{/if}{/foreach} />
 				<label for="clue2">知人の紹介</label>
-				<input class="checkbox" id="clue3" type="checkbox" name="clue[3]" value="パンフレットや広告を見て" {if $list.clue.3}checked="checked"{/if} />
+				<input class="checkbox" id="clue3" type="checkbox" name="clue[]" value="パンフレットや広告を見て" {foreach from=$list.clue item=clue}{if $clue == "パンフレットや広告を見て"}checked="checked"{/if}{/foreach} />
 				<label for="clue3">パンフレットや広告を見て</label>
-				<input class="checkbox" id="clue4" type="checkbox" name="clue[4]" value="セミナーやイベントで知って" {if $list.clue.4}checked="checked"{/if} />
+				<input class="checkbox" id="clue4" type="checkbox" name="clue[]" value="セミナーやイベントで知って" {foreach from=$list.clue item=clue}{if $clue == "セミナーやイベントで知って"}checked="checked"{/if}{/foreach} />
 				<label for="clue4">セミナーやイベントで知って</label>
-				<input class="checkbox" id="clue5" type="checkbox" name="clue[5]" value="利用者からの紹介" {if $list.clue.5}checked="checked"{/if} />
+				<input class="checkbox" id="clue5" type="checkbox" name="clue[]" value="利用者からの紹介" {foreach from=$list.clue item=clue}{if $clue == "利用者からの紹介"}checked="checked"{/if}{/foreach} />
 				<label for="clue5">利用者からの紹介</label>
-				<input class="checkbox" id="clue6" type="checkbox" name="clue[6]" value="その他" {if $list.clue.6}checked="checked"{/if} />
+				<input class="checkbox" id="clue6" type="checkbox" name="clue[]" value="その他" {foreach from=$list.clue item=clue}{if $clue == "その他"}checked="checked"{/if}{/foreach} />
 				<label for="clue6">その他</label>
 			</td>
 		</tr>
