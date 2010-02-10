@@ -2,3 +2,5 @@ config.php
 templates_c/
 libs/
 jquery.*
+*.swp
+*~

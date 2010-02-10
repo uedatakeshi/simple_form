@@ -1,7 +1,11 @@
 $(document).ready(function(){
 	var mess = $('div#messages');
+	
 	$('form').validate({
 		errorContainer: mess,
+		onkeyup: false,
+		onfocusout: false,
+		onclick: false,
 		errorLabelContainer: $("ul", mess),
 		wrapper: 'li',
 		rules: {
