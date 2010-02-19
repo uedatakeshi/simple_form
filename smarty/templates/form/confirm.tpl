@@ -11,17 +11,6 @@
 <div id="container">
 	<h1>お問い合せ</h1>
 		<p>以下の内容で送信いたします。</p>
-	<form action="form.php" method="post">
-	<fieldset>
-	{foreach from=$list key=k item=v}
-		{if is_array($v)}
-			{foreach from=$v key=k2 item=v2}
-				<input type="hidden" name="{$k|escape}[{$k2|escape}]" value="{$v2|escape}" />
-			{/foreach}
-		{elseif $k != 'submit'}
-			<input type="hidden" name="{$k|escape}" value="{$v|escape}" />
-		{/if}
-	{/foreach}
 	<table>
 	<tbody>
 		<tr>
@@ -59,11 +48,37 @@
 	</tbody>
 	</table>
 	<div class="controls">
-		<input id="back_button" type="submit" value="back" name="submit" />
-		<input id="send_button" type="submit" value="send" name="submit" />
-	</div>
+	<form action="form.php" method="post">
+	<fieldset>
+	<input type="hidden" name="mode" value="back" />
+	{foreach from=$list key=k item=v}
+		{if is_array($v)}
+			{foreach from=$v key=k2 item=v2}
+				<input type="hidden" name="{$k|escape}[{$k2|escape}]" value="{$v2|escape}" />
+			{/foreach}
+		{elseif $k != 'mode'}
+			<input type="hidden" name="{$k|escape}" value="{$v|escape}" />
+		{/if}
+	{/foreach}
+	<input type="submit" value="戻る" name="submit" />
 	</fieldset>
 	</form>
+	<form action="form.php" method="post">
+	<fieldset>
+	<input type="hidden" name="mode" value="send" />
+	{foreach from=$list key=k item=v}
+		{if is_array($v)}
+			{foreach from=$v key=k2 item=v2}
+				<input type="hidden" name="{$k|escape}[{$k2|escape}]" value="{$v2|escape}" />
+			{/foreach}
+		{elseif $k != 'mode'}
+			<input type="hidden" name="{$k|escape}" value="{$v|escape}" />
+		{/if}
+	{/foreach}
+	<input type="submit" value="送信" name="submit" />
+	</fieldset>
+	</form>
+	</div>
 </div>
 </body>
 </html>

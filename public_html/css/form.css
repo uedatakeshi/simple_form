@@ -1,6 +1,9 @@
 
-fieldset {
+form, fieldset {
+	display: inline;
 	border: none;
+	margin: 0px;
+	padding: 0px;
 }
 
 table {
@@ -32,31 +35,23 @@ input.radio, input.checkbox {
 	color: red;
 }
 
-.controls input {
-	border: none;
-	cursor: pointer;
+input[type="submit"], input[type="reset"] {
+	display: inline;
 	height: 31px;
-	margin: 0;
-	overflow: hidden;
-	padding: 31px 0 0 79px;
 	width: 79px;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 5px 14px;
+	color: #fff;
+	border: 1px solid #3792b3;
+	background: #3792b3 url(glass.png) repeat-x 0 50%;
+	border-radius: 14px;
+	-webkit-border-radius: 14px;
+	-moz-border-radius: 14px;
 }
 
-.controls input#next_button {
-	background: url("../img/next.png") no-repeat scroll 0 0 transparent;
-}
-
-.controls input#reset_button {
-	background: url("../img/reset.png") no-repeat scroll 0 0 transparent;
-	float: left;
-}
-
-.controls input#back_button {
-	background: url("../img/back.png") no-repeat scroll 0 0 transparent;
-	float: left;
-}
-
-.controls input#send_button {
-	background: url("../img/send.png") no-repeat scroll 0 0 transparent;
+input[type="submit"]:hover, input[type="reset"]:hover {
+	border: 1px solid #a14141;
+	background-color: #a14141;
 }
 

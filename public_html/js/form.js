@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	var mess = $('div#messages');
+	$('div#messages').append('<ul></ul>');
 	
 	$('form').validate({
 		errorContainer: mess,

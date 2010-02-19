@@ -23,7 +23,7 @@
 
 require_once('./config.php');
 
-if (isset($_POST['submit'])) {
+if (isset($_POST['mode'])) {
 	foreach($_POST as $k => $v) {
 		if (!is_array($v)) {
 			$v = trim(mb_convert_kana($v, "KVasn", "UTF-8"));
@@ -59,17 +59,16 @@ if (isset($_POST['submit'])) {
 		exit;
 	}
 
-	if ($list['submit'] == 'next') {
-print_r($list);
+	if ($list['mode'] == 'next') {
 		$smarty->display('form/confirm.tpl');
 		exit;
 
-	} elseif ($list['submit'] == 'back') {
+	} elseif ($list['mode'] == 'back') {
 
 		$smarty->display('form/form.tpl');
 		exit;
 
-	} elseif ($list['submit'] == 'send') {
+	} elseif ($list['mode'] == 'send') {
 
 		$from = MAIL_FROM;
 		$from_name = FROM_NAME;

@@ -16,15 +16,16 @@
 		<p>弊社へのお問い合せ、当サイトに対するご要望など、どうぞお気軽にお問い合せください。</p>
 	<form action="form.php" method="post">
 	<fieldset>
+	<input type="hidden" name="mode" value="next" />
 	<p>*印は必須項目です。</p>
 		<div id="messages">
+		{if $emes}
 			<ul>
-	{if $emes}
 			{foreach from=$emes item=emes}
 				<li>{$emes|escape}</li>
 			{/foreach}
-	{/if}
 			</ul>
+		{/if}
 		</div>
 	<table>
 	<tbody>
@@ -83,8 +84,8 @@
 	</tbody>
 	</table>
 	<div class="controls">
-		<input id="reset_button" type="reset" value="reset" name="reset" />
-		<input id="next_button" type="submit" value="next" name="submit" />
+		<input type="reset" value="リセット" name="reset" />
+		<input type="submit" value="次へ" name="submit" />
 	</div>
 	</fieldset>
 	</form>
